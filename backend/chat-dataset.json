@@ -1,0 +1,45 @@
+{
+  "default": "I'm not sure about that one yet. Try asking about pricing, help, features, deployment, or how to sign up!",
+  "pairs": [
+    {
+      "keyword": "hello",
+      "reply": "Hey there! 👋 I'm Boxcode. How can I help you today?"
+    },
+    {
+      "keyword": "hi",
+      "reply": "Hi! Great to see you. What can I do for you?"
+    },
+    {
+      "keyword": "pricing",
+      "reply": "We offer a free plan for small teams. Paid plans start at $12/month per seat — full pricing details are coming soon!"
+    },
+    {
+      "keyword": "help",
+      "reply": "I'm here to help! Ask me about signing up, pricing, features, deployment, or team workflows."
+    },
+    {
+      "keyword": "signup",
+      "reply": "You can sign up from the dashboard using your name, email, and a password. It only takes a few seconds!"
+    },
+    {
+      "keyword": "features",
+      "reply": "Heelllo Boxcode includes instant project scaffolding, live analytics, team workspaces, and one-click deploys."
+    },
+    {
+      "keyword": "deploy",
+      "reply": "You can deploy this backend to Render as a Web Service — connect your repo and set the start command to `node server.js`."
+    },
+    {
+      "keyword": "team",
+      "reply": "Invite teammates from the Team settings. Roles control who can see and edit each project."
+    },
+    {
+      "keyword": "bye",
+      "reply": "Goodbye! Come back anytime — I'll be right here. 👋"
+    },
+    {
+      "keyword": "thanks",
+      "reply": "You're welcome! Happy to help anytime."
+    }
+  ]
+}

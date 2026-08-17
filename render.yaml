@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: heelllo-boxcode-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: http://localhost:3000
