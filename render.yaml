@@ -1,12 +1,16 @@
+# Render Blueprint for the Heelllo Boxcode backend (Web Service).
+#
+# Set these environment variables manually in the Render dashboard,
+# on the Web Service's Environment tab (no secret values are stored here):
+#   - JWT_SECRET  -> click "Generate" for a long random value
+#   - CORS_ORIGIN -> your frontend URL (see note below)
+#
+# PORT is set automatically by Render — do not add it manually.
+
 services:
   - type: web
     name: heelllo-boxcode-backend
     runtime: node
     rootDir: backend
     buildCommand: npm install
-    startCommand: node server.js
-    envVars:
-      - key: JWT_SECRET
-        generateValue: true
-      - key: CORS_ORIGIN
-        value: http://localhost:3000
+    startCommand: npm start
