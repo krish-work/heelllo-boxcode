@@ -1,0 +1,3 @@
+# The backend is deployed separately to Render — keep it out of the
+# frontend (Next.js) build and off the Vercel upload entirely.
+backend
