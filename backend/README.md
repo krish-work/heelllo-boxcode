@@ -5,10 +5,10 @@ Minimal Express + SQLite API for the Heelllo Boxcode frontend.
 ## Stack
 
 - Node.js + Express
-- SQLite via `better-sqlite3` (single `users` table)
+- SQLite via `better-sqlite3` (`users` + `chat_messages` tables)
 - bcrypt password hashing
 - JWT auth via `jsonwebtoken`
-- Keyword-matched chat replies (no external AI)
+- Dataset-lookup chat replies from a local JSON knowledge base (`knowledge-base.json`) — no external API calls
 
 ## Endpoints
 
@@ -17,8 +17,8 @@ Minimal Express + SQLite API for the Heelllo Boxcode frontend.
 | POST | `/api/auth/signup` | — | `{ name, email, password }` → `{ token, user }` |
 | POST | `/api/auth/login` | — | `{ email, password }` → `{ token, user }` (401 on failure) |
 | GET | `/api/auth/me` | Bearer token | `{ name, email }` |
-| POST | `/api/chat` | Bearer token | `{ message }` → `{ reply }` |
-| GET | `/api/chat/history` | Bearer token | mock array of past messages |
+| POST | `/api/chat` | Bearer token | `{ message }` → `{ reply, sources }` — reply is the best-matching knowledge-base entry's answer (fallback string when nothing scores above the threshold); persists both turns to SQLite |
+| GET | `/api/chat/history` | Bearer token | real per-user conversation history from SQLite |
 
 ## Local setup
 
@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-The server listens on `PORT` (default `4000`). `.env` already contains dev defaults.
+The server listens on `PORT` (default `4000`). Copy `.env.example` to `.env` and set `JWT_SECRET`. Chat runs on local dataset lookup only — no external API calls or API keys required.
 
 ## Deploy to Render
 
@@ -58,3 +58,4 @@ Then point the frontend's API base URL at the Render URL.
 | `JWT_SECRET` | Secret used to sign JWTs | — |
 | `CORS_ORIGIN` | Allowed frontend origin | `http://localhost:3000` |
 | `DB_PATH` | SQLite file path (`:memory:` for tests) | `backend/heelllo.db` |
+| `KNOWLEDGE_TOP_K` | Max entries the retriever returns per query | `4` |

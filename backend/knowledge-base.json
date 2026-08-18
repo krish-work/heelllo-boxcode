@@ -1,0 +1,768 @@
+{
+  "version": 1,
+  "description": "Heelllo Boxcode support knowledge base — hand-authored Q&A entries used as grounding context for the chat assistant. Retrieval matches user messages against question, keywords, and category.",
+  "categories": [
+    "getting-started",
+    "account",
+    "pricing",
+    "projects",
+    "deployment",
+    "analytics",
+    "teams",
+    "api",
+    "troubleshooting",
+    "security",
+    "product"
+  ],
+  "entries": [
+    {
+      "id": "getting-started-01",
+      "category": "getting-started",
+      "question": "What is Heelllo Boxcode?",
+      "answer": "Heelllo Boxcode is a platform for instant project scaffolding, live analytics, team workspaces, and one-click deploys. You can create a new project from a template in seconds and ship it without touching servers.",
+      "keywords": ["what is", "overview", "about", "platform", "features"]
+    },
+    {
+      "id": "getting-started-02",
+      "category": "getting-started",
+      "question": "How do I get started with my first project?",
+      "answer": "Sign up, open the dashboard, click New Project, pick a template (Next.js, Express, or static), and Boxcode scaffolds the repo for you. Then hit Deploy to publish it.",
+      "keywords": ["get started", "first project", "start", "tutorial", "onboarding"]
+    },
+    {
+      "id": "getting-started-03",
+      "category": "getting-started",
+      "question": "What templates are available?",
+      "answer": "Boxcode ships templates for Next.js, Node/Express APIs, and static sites, with more on the way. Each includes sensible defaults like ESLint, TypeScript config, and a README.",
+      "keywords": ["templates", "starter", "boilerplate", "scaffold", "next.js", "express"]
+    },
+    {
+      "id": "getting-started-04",
+      "category": "getting-started",
+      "question": "How long does it take to set up?",
+      "answer": "Under a minute. Sign up, scaffold a project, and deploy — the whole flow is designed to be done in one sitting.",
+      "keywords": ["fast", "quick", "setup time", "minutes", "speed"]
+    },
+    {
+      "id": "getting-started-05",
+      "category": "getting-started",
+      "question": "Do I need my own server or hosting?",
+      "answer": "No. One-click deploys handle hosting for your frontend. For custom needs you can point deployments at your own VPS or cloud account.",
+      "keywords": ["hosting", "server", "vps", "own infrastructure", "self-host"]
+    },
+    {
+      "id": "getting-started-06",
+      "category": "getting-started",
+      "question": "Is there a demo or sample project?",
+      "answer": "The dashboard includes a sample analytics project you can explore without creating anything — open the left sidebar and click Sample Dashboard.",
+      "keywords": ["demo", "sample", "example", "try", "preview"]
+    },
+    {
+      "id": "getting-started-07",
+      "category": "getting-started",
+      "question": "What do I do after creating a project?",
+      "answer": "Clone it locally with git, run npm install and npm run dev, and start building. The README in each template walks through the exact commands.",
+      "keywords": ["next steps", "after create", "clone", "develop locally"]
+    },
+    {
+      "id": "getting-started-08",
+      "category": "getting-started",
+      "question": "Can I import an existing codebase?",
+      "answer": "Yes — connect a GitHub repo from Project Settings → Import, or push your existing code to a new Boxcode project. Imports preserve your git history.",
+      "keywords": ["import", "existing repo", "github", "migrate", "bring code"]
+    },
+    {
+      "id": "getting-started-09",
+      "category": "getting-started",
+      "question": "What's the difference between a project and a workspace?",
+      "answer": "A project is one codebase (frontend, API, or static site). A workspace is a shared team container that groups projects, members, and billing.",
+      "keywords": ["project vs workspace", "difference", "org", "organization", "structure"]
+    },
+    {
+      "id": "getting-started-10",
+      "category": "getting-started",
+      "question": "Where can I find documentation?",
+      "answer": "This assistant answers most questions, and each template ships with its own README. Full docs are linked from the dashboard footer.",
+      "keywords": ["docs", "documentation", "manual", "help center", "guide"]
+    },
+    {
+      "id": "account-01",
+      "category": "account",
+      "question": "How do I sign up?",
+      "answer": "Click Sign Up on the login page and enter your name, email, and a password. Your account is created instantly and you're signed in with a JWT token.",
+      "keywords": ["sign up", "register", "create account", "join"]
+    },
+    {
+      "id": "account-02",
+      "category": "account",
+      "question": "How do I log in?",
+      "answer": "Use the email and password you signed up with on the login page. Successful login returns a token that the dashboard stores and sends as a Bearer token.",
+      "keywords": ["login", "sign in", "log in", "authenticate", "access"]
+    },
+    {
+      "id": "account-03",
+      "category": "account",
+      "question": "I forgot my password — how do I reset it?",
+      "answer": "Password reset isn't available yet. Contact support from the dashboard and we'll reset it manually for your account.",
+      "keywords": ["forgot password", "reset", "recovery", "password reset"]
+    },
+    {
+      "id": "account-04",
+      "category": "account",
+      "question": "Can I change my name or email?",
+      "answer": "Yes — go to Account Settings in the sidebar. Changing your email requires confirming the new address before it takes effect.",
+      "keywords": ["change email", "change name", "profile", "update account", "edit account"]
+    },
+    {
+      "id": "account-05",
+      "category": "account",
+      "question": "How do I delete my account?",
+      "answer": "Account deletion is available in Account Settings → Danger Zone. It permanently removes your projects and chat history after a 7-day grace period.",
+      "keywords": ["delete account", "cancel account", "remove account", "close account"]
+    },
+    {
+      "id": "account-06",
+      "category": "account",
+      "question": "Can I have multiple accounts?",
+      "answer": "You can, but we recommend one account with multiple workspaces instead — billing and history stay cleaner in a single login.",
+      "keywords": ["multiple accounts", "second account", "more than one"]
+    },
+    {
+      "id": "account-07",
+      "category": "account",
+      "question": "Why am I logged out suddenly?",
+      "answer": "Sessions last 7 days by default. You'll be logged out when the token expires, when the server's JWT_SECRET changes, or if you log in from a new device.",
+      "keywords": ["logged out", "session expired", "token", "re-login", "sign out"]
+    },
+    {
+      "id": "account-08",
+      "category": "account",
+      "question": "How do I log out?",
+      "answer": "Use the Log Out button in the sidebar footer. Logging out clears the stored token from your browser.",
+      "keywords": ["logout", "log out", "sign out", "exit"]
+    },
+    {
+      "id": "account-09",
+      "category": "account",
+      "question": "What happens to my data if I'm removed from a workspace?",
+      "answer": "Your personal account stays intact; you lose access to that workspace's projects and chat history. Re-invitation restores access.",
+      "keywords": ["removed", "workspace access", "kicked", "revoked", "membership"]
+    },
+    {
+      "id": "account-10",
+      "category": "account",
+      "question": "Can I use the same email for two workspaces?",
+      "answer": "Yes — your email identifies you across workspaces. You switch between them from the workspace switcher at the top of the sidebar.",
+      "keywords": ["email workspaces", "same email", "multiple workspaces", "switch workspace"]
+    },
+    {
+      "id": "pricing-01",
+      "category": "pricing",
+      "question": "How much does Heelllo Boxcode cost?",
+      "answer": "There's a free plan for small teams. Paid plans start at $12 per seat per month and add unlimited projects, advanced analytics, and priority support.",
+      "keywords": ["price", "cost", "pricing", "plans", "how much"]
+    },
+    {
+      "id": "pricing-02",
+      "category": "pricing",
+      "question": "Is there a free trial?",
+      "answer": "The free plan is a permanent free tier, not a trial — no credit card required. Upgrade whenever you need more seats or analytics.",
+      "keywords": ["free trial", "trial", "free plan", "no credit card", "upgrade"]
+    },
+    {
+      "id": "pricing-03",
+      "category": "pricing",
+      "question": "What's included in the free plan?",
+      "answer": "The free plan includes one workspace, up to 3 projects, and 14 days of analytics history — enough for small teams to get started.",
+      "keywords": ["free plan", "free tier", "limits", "included", "starter"]
+    },
+    {
+      "id": "pricing-04",
+      "category": "pricing",
+      "question": "What does the paid plan include?",
+      "answer": "Paid plans include unlimited projects, 12 months of analytics history, SSO-ready team permissions, and priority support. Billing is per seat per month.",
+      "keywords": ["paid plan", "pro", "features", "unlimited", "per seat"]
+    },
+    {
+      "id": "pricing-05",
+      "category": "pricing",
+      "question": "How does per-seat billing work?",
+      "answer": "You pay $12 per active member per month. Inactive members (no login for 90 days) don't count toward the bill.",
+      "keywords": ["per seat", "billing", "seats", "per user", "active member"]
+    },
+    {
+      "id": "pricing-06",
+      "category": "pricing",
+      "question": "Can I change plans later?",
+      "answer": "Yes — upgrade or downgrade anytime from Billing settings. Changes are prorated to the end of the current billing cycle.",
+      "keywords": ["change plan", "upgrade", "downgrade", "switch plan", "billing cycle"]
+    },
+    {
+      "id": "pricing-07",
+      "category": "pricing",
+      "question": "Do you offer student or open-source discounts?",
+      "answer": "Yes — verified students and open-source maintainers get 50% off paid plans. Apply from Billing → Discounts with valid proof.",
+      "keywords": ["discount", "student", "open source", "coupon", "promo"]
+    },
+    {
+      "id": "pricing-08",
+      "category": "pricing",
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit and debit cards via Stripe. Invoicing for annual plans is available on request for teams.",
+      "keywords": ["payment", "pay", "credit card", "stripe", "invoice"]
+    },
+    {
+      "id": "pricing-09",
+      "category": "pricing",
+      "question": "How do I get a refund?",
+      "answer": "Paid plans come with a 14-day money-back guarantee. Contact support from the dashboard and we'll process the refund to the original card.",
+      "keywords": ["refund", "money back", "cancel billing", "guarantee"]
+    },
+    {
+      "id": "projects-01",
+      "category": "projects",
+      "question": "How do I create a new project?",
+      "answer": "Click New Project in the dashboard, pick a template, name it, and choose a workspace. Boxcode scaffolds the repo instantly.",
+      "keywords": ["create project", "new project", "add project", "scaffold"]
+    },
+    {
+      "id": "projects-02",
+      "category": "projects",
+      "question": "How do I delete a project?",
+      "answer": "Project Settings → Danger Zone → Delete Project. Deletion is permanent and also removes the deployed site after 24 hours.",
+      "keywords": ["delete project", "remove project", "destroy"]
+    },
+    {
+      "id": "projects-03",
+      "category": "projects",
+      "question": "How do I rename a project?",
+      "answer": "Rename it from Project Settings. The URL slug updates too, and old links redirect for 30 days.",
+      "keywords": ["rename", "project name", "slug"]
+    },
+    {
+      "id": "projects-04",
+      "category": "projects",
+      "question": "Can I duplicate a project?",
+      "answer": "Yes — Project Settings → Duplicate creates a full copy including environment variables, but not your database contents.",
+      "keywords": ["duplicate", "copy project", "clone project", "fork"]
+    },
+    {
+      "id": "projects-05",
+      "category": "projects",
+      "question": "What is a project slug?",
+      "answer": "The slug is the short identifier in your project URL (e.g. my-app). It must be unique per workspace and can be edited in Project Settings.",
+      "keywords": ["slug", "url", "project id", "identifier"]
+    },
+    {
+      "id": "projects-06",
+      "category": "projects",
+      "question": "Where are environment variables configured?",
+      "answer": "Project Settings → Environment Variables. They're injected at build and runtime, and are never exposed to the browser unless prefixed NEXT_PUBLIC_.",
+      "keywords": ["env vars", "environment variables", "secrets", "config", ".env"]
+    },
+    {
+      "id": "projects-07",
+      "category": "projects",
+      "question": "Can I use my own domain?",
+      "answer": "Yes — add a custom domain in Project Settings → Domains. We issue an SSL certificate automatically once DNS points at us.",
+      "keywords": ["custom domain", "domain", "ssl", "dns", "subdomain"]
+    },
+    {
+      "id": "projects-08",
+      "category": "projects",
+      "question": "How do I invite a teammate to a project?",
+      "answer": "Project Settings → Members → Invite. Teammates must already have an account; you can assign Viewer or Editor roles.",
+      "keywords": ["invite project", "project members", "add teammate", "share project"]
+    },
+    {
+      "id": "projects-09",
+      "category": "projects",
+      "question": "What happens when I archive a project?",
+      "answer": "Archiving pauses builds and deployments but keeps your code and history. Unarchive anytime from the project list.",
+      "keywords": ["archive", "pause", "freeze", "suspend project"]
+    },
+    {
+      "id": "projects-10",
+      "category": "projects",
+      "question": "How do I see my projects?",
+      "answer": "All your projects are listed in the dashboard sidebar under your workspace. Use the search box to filter by name.",
+      "keywords": ["list projects", "my projects", "view projects", "project list"]
+    },
+    {
+      "id": "deployment-01",
+      "category": "deployment",
+      "question": "How do I deploy my project?",
+      "answer": "Click Deploy in the project header. Boxcode builds and publishes to a preview URL first; promote it to production when you're happy.",
+      "keywords": ["deploy", "deployment", "publish", "go live", "launch"]
+    },
+    {
+      "id": "deployment-02",
+      "category": "deployment",
+      "question": "What platforms do you deploy to?",
+      "answer": "Frontends deploy to Vercel-compatible infrastructure, and the Express backend is designed for Render Web Services. Custom VPS/EC2 is supported for advanced users.",
+      "keywords": ["platforms", "vercel", "render", "ec2", "hosting provider"]
+    },
+    {
+      "id": "deployment-03",
+      "category": "deployment",
+      "question": "How do I deploy the Express backend?",
+      "answer": "Push the repo, create a Render Web Service with root directory backend, build command npm install, start command node server.js, and set JWT_SECRET and CORS_ORIGIN.",
+      "keywords": ["backend deploy", "express deploy", "render", "api deployment"]
+    },
+    {
+      "id": "deployment-04",
+      "category": "deployment",
+      "question": "How do I deploy the Next.js frontend?",
+      "answer": "Connect the repo to Vercel, set the framework to Next.js, and add NEXT_PUBLIC_API_URL pointing at your deployed backend. Vercel handles the build.",
+      "keywords": ["next.js deploy", "frontend deploy", "vercel", "static"]
+    },
+    {
+      "id": "deployment-05",
+      "category": "deployment",
+      "question": "What is a preview deployment?",
+      "answer": "Every push to a branch creates an isolated preview URL where you can test changes before they reach production. Preview URLs expire after 7 days.",
+      "keywords": ["preview", "staging", "branch deploy", "test url"]
+    },
+    {
+      "id": "deployment-06",
+      "category": "deployment",
+      "question": "How do I set environment variables for production?",
+      "answer": "Add them in Project Settings → Environment Variables and redeploy. Values are encrypted at rest and only available at build/runtime on the server.",
+      "keywords": ["production env", "environment production", "secrets deploy", "env in prod"]
+    },
+    {
+      "id": "deployment-07",
+      "category": "deployment",
+      "question": "My deploy failed — where do I start?",
+      "answer": "Open the deploy log from the Deployments tab. The most common causes are a failed npm install, a missing start script, or a syntax error in the build.",
+      "keywords": ["deploy failed", "build error", "failed build", "error log"]
+    },
+    {
+      "id": "deployment-08",
+      "category": "deployment",
+      "question": "How do I roll back a bad deployment?",
+      "answer": "Deployments tab → pick the last working deploy → Rollback. Rollbacks keep the old environment variables, so secrets aren't lost.",
+      "keywords": ["rollback", "revert", "undo deploy", "previous version"]
+    },
+    {
+      "id": "deployment-09",
+      "category": "deployment",
+      "question": "Can I deploy from my local machine?",
+      "answer": "Yes — a CLI is coming to npm soon that will let you run deploy from the repo root. Until then, pushes to the main branch deploy automatically.",
+      "keywords": ["cli", "local deploy", "command line", "git push deploy"]
+    },
+    {
+      "id": "deployment-10",
+      "category": "deployment",
+      "question": "How are domains and SSL handled?",
+      "answer": "Every deployment gets an https URL automatically. Custom domains get free SSL certs issued and renewed automatically.",
+      "keywords": ["https", "ssl cert", "domain", "tls", "certificate"]
+    },
+    {
+      "id": "analytics-01",
+      "category": "analytics",
+      "question": "What analytics does Boxcode provide?",
+      "answer": "Live dashboards for page views, active users, events, and API usage — updated in near real time on the dashboard.",
+      "keywords": ["analytics", "metrics", "dashboard", "stats", "usage"]
+    },
+    {
+      "id": "analytics-02",
+      "category": "analytics",
+      "question": "How do I track a custom event?",
+      "answer": "Call our events API with an event name and optional properties: POST /api/events with your project token. Events appear in the dashboard within seconds.",
+      "keywords": ["custom event", "track event", "events api", "event tracking"]
+    },
+    {
+      "id": "analytics-03",
+      "category": "analytics",
+      "question": "What is an active user?",
+      "answer": "An active user is a unique visitor with activity in the last 5 minutes. The dashboard shows active now and active today counts.",
+      "keywords": ["active user", "active now", "online", "unique visitor", "realtime"]
+    },
+    {
+      "id": "analytics-04",
+      "category": "analytics",
+      "question": "How far back does analytics history go?",
+      "answer": "Free plans keep 14 days of history; paid plans keep 12 months. History is stored as aggregated daily buckets, not raw logs.",
+      "keywords": ["history", "retention", "data range", "how long", "past data"]
+    },
+    {
+      "id": "analytics-05",
+      "category": "analytics",
+      "question": "Can I export analytics data?",
+      "answer": "Yes — export CSV or JSON from the analytics header. Exports include the current view's date range and filters.",
+      "keywords": ["export", "csv", "json", "download data", "report"]
+    },
+    {
+      "id": "analytics-06",
+      "category": "analytics",
+      "question": "Why does my page view count look low?",
+      "answer": "Counts come from the snippet installed in your app. If the snippet loads late or is blocked by ad-blockers, views are undercounted.",
+      "keywords": ["wrong count", "low views", "missing data", "snippet", "ad blocker"]
+    },
+    {
+      "id": "analytics-07",
+      "category": "analytics",
+      "question": "What is the analytics snippet?",
+      "answer": "A one-line script with your project token, added to the head of your site. It reports page views and referrers without cookies.",
+      "keywords": ["snippet", "script", "tracking code", "install analytics", "tag"]
+    },
+    {
+      "id": "analytics-08",
+      "category": "analytics",
+      "question": "Do you track individual users?",
+      "answer": "No — analytics are privacy-friendly and cookieless. We track aggregate events, never individual identities, so no consent banner is needed.",
+      "keywords": ["privacy", "cookies", "gdpr", "track users", "cookieless"]
+    },
+    {
+      "id": "analytics-09",
+      "category": "analytics",
+      "question": "Can I filter analytics by page or referrer?",
+      "answer": "Yes — the dashboard supports filters for page path, referrer, device, and country. Filters combine additively.",
+      "keywords": ["filter", "segment", "referrer", "by page", "device"]
+    },
+    {
+      "id": "analytics-10",
+      "category": "analytics",
+      "question": "How do I add analytics to my Next.js app?",
+      "answer": "Add the snippet to layout.tsx, or use the included Analytics component from the template. It reports route changes automatically on the client.",
+      "keywords": ["next.js analytics", "add to app", "react", "component", "install"]
+    },
+    {
+      "id": "teams-01",
+      "category": "teams",
+      "question": "How do I invite teammates?",
+      "answer": "Head to Team → Invite in the sidebar, enter their email addresses, and pick a role. They'll get an email with a join link.",
+      "keywords": ["invite", "teammates", "team members", "add member", "invite email"]
+    },
+    {
+      "id": "teams-02",
+      "category": "teams",
+      "question": "What roles exist?",
+      "answer": "Owner, Admin, Editor, and Viewer. Owners manage billing and deletion; Admins manage members; Editors can push code; Viewers can only read.",
+      "keywords": ["roles", "permissions", "access levels", "owner", "admin", "editor", "viewer"]
+    },
+    {
+      "id": "teams-03",
+      "category": "teams",
+      "question": "How do I remove a teammate?",
+      "answer": "Team → Members → Remove. Removed members lose access immediately, and their personal data is retained on their own account.",
+      "keywords": ["remove member", "remove teammate", "kick", "revoke access"]
+    },
+    {
+      "id": "teams-04",
+      "category": "teams",
+      "question": "Can I change someone's role?",
+      "answer": "Yes — Team → Members → change role from the member's row. Owners can't be demoted by anyone but the owner.",
+      "keywords": ["change role", "promote", "demote", "assign role"]
+    },
+    {
+      "id": "teams-05",
+      "category": "teams",
+      "question": "What is a workspace?",
+      "answer": "A workspace is your team's shared container for projects, members, and billing. One account can belong to many workspaces.",
+      "keywords": ["workspace", "team", "organization", "shared space"]
+    },
+    {
+      "id": "teams-06",
+      "category": "teams",
+      "question": "How do I create a new workspace?",
+      "answer": "Workspace switcher → New Workspace. You become its owner and can invite members and create projects inside it.",
+      "keywords": ["create workspace", "new team", "add workspace", "organization"]
+    },
+    {
+      "id": "teams-07",
+      "category": "teams",
+      "question": "How do I switch between workspaces?",
+      "answer": "Use the workspace switcher at the top of the sidebar. Projects and analytics shown are always for the active workspace.",
+      "keywords": ["switch workspace", "change workspace", "active workspace"]
+    },
+    {
+      "id": "teams-08",
+      "category": "teams",
+      "question": "Can a project belong to two workspaces?",
+      "answer": "No — each project lives in exactly one workspace. To share it, duplicate it into the other workspace or invite the people there as members.",
+      "keywords": ["share project", "two workspaces", "move project", "transfer"]
+    },
+    {
+      "id": "teams-09",
+      "category": "teams",
+      "question": "What happens to projects when I leave a workspace?",
+      "answer": "They stay with the workspace. If you created them, ownership transfers to an Admin; otherwise they're untouched.",
+      "keywords": ["leave workspace", "exit team", "ownership transfer"]
+    },
+    {
+      "id": "teams-10",
+      "category": "teams",
+      "question": "How do I transfer workspace ownership?",
+      "answer": "Team → Settings → Transfer Ownership. Only the current Owner can transfer, and the new owner must be an Admin.",
+      "keywords": ["transfer owner", "change owner", "hand off", "ownership"]
+    },
+    {
+      "id": "api-01",
+      "category": "api",
+      "question": "Is there a public API?",
+      "answer": "Yes — the backend exposes a REST API at /api. Auth endpoints are /api/auth/signup and /api/auth/login; everything else needs a Bearer token.",
+      "keywords": ["api", "rest", "endpoints", "developer", "integration"]
+    },
+    {
+      "id": "api-02",
+      "category": "api",
+      "question": "How do I authenticate API requests?",
+      "answer": "Sign up or log in to get a JWT, then send it as Authorization: Bearer <token>. Tokens expire after 7 days.",
+      "keywords": ["authenticate", "bearer token", "jwt", "api key", "header"]
+    },
+    {
+      "id": "api-03",
+      "category": "api",
+      "question": "What does the chat API return?",
+      "answer": "POST /api/chat with { message } returns { reply } — the assistant's grounded answer — plus sources, the knowledge-base entries used as context.",
+      "keywords": ["chat api", "chat endpoint", "send message", "api response"]
+    },
+    {
+      "id": "api-04",
+      "category": "api",
+      "question": "Are there rate limits?",
+      "answer": "Yes — 60 requests per minute per user on auth and chat endpoints. Exceeding it returns HTTP 429 with a Retry-After header.",
+      "keywords": ["rate limit", "429", "throttle", "limits", "quota"]
+    },
+    {
+      "id": "api-05",
+      "category": "api",
+      "question": "How do I report a bug in the API?",
+      "answer": "Include the request method, path, status code, and timestamp from the response headers. Support is reachable from the dashboard.",
+      "keywords": ["bug report", "api error", "report issue", "support"]
+    },
+    {
+      "id": "api-06",
+      "category": "api",
+      "question": "What content type do requests use?",
+      "answer": "All request and response bodies are JSON (application/json). Send a Content-Type: application/json header on POST/PUT requests.",
+      "keywords": ["json", "content type", "request body", "format", "encoding"]
+    },
+    {
+      "id": "api-07",
+      "category": "api",
+      "question": "What does the health endpoint do?",
+      "answer": "GET /health returns { status: 'ok' } and is used by load balancers and uptime monitors to check the API is alive.",
+      "keywords": ["health", "status", "uptime", "ping", "liveness"]
+    },
+    {
+      "id": "api-08",
+      "category": "api",
+      "question": "Can I call the API from a browser?",
+      "answer": "The API supports CORS for your configured origin, but browser calls expose your JWT. Server-side calls are safer for anything sensitive.",
+      "keywords": ["browser", "cors", "cross origin", "client side", "frontend call"]
+    },
+    {
+      "id": "api-09",
+      "category": "api",
+      "question": "How do I get the user's profile via API?",
+      "answer": "GET /api/auth/me with a Bearer token returns { name, email } for the authenticated user.",
+      "keywords": ["profile", "me endpoint", "current user", "get user"]
+    },
+    {
+      "id": "api-10",
+      "category": "api",
+      "question": "What HTTP status codes should I handle?",
+      "answer": "400 for bad input, 401 for missing/invalid token, 409 for duplicate signup, 429 for rate limits, and 5xx for server/provider errors. Your client should surface these gracefully.",
+      "keywords": ["status codes", "errors", "http", "400", "401", "429", "500"]
+    },
+    {
+      "id": "troubleshooting-01",
+      "category": "troubleshooting",
+      "question": "The dashboard shows Network Error — what now?",
+      "answer": "The frontend can't reach the API. Check that the backend is running on port 4000 and that NEXT_PUBLIC_API_URL points at it.",
+      "keywords": ["network error", "connection refused", "can't reach api", "offline", "4000"]
+    },
+    {
+      "id": "troubleshooting-02",
+      "category": "troubleshooting",
+      "question": "I get CORS errors in the browser console.",
+      "answer": "CORS blocks requests from origins not in the backend's CORS_ORIGIN setting. Set CORS_ORIGIN to your frontend URL (e.g. http://localhost:3000) and restart.",
+      "keywords": ["cors", "cross origin", "blocked", "preflight", "origin"]
+    },
+    {
+      "id": "troubleshooting-03",
+      "category": "troubleshooting",
+      "question": "Why do I get 401 Invalid or expired token?",
+      "answer": "The token is missing, expired (7 days), or the JWT_SECRET changed. Log out and log back in to mint a fresh token.",
+      "keywords": ["401", "token expired", "invalid token", "unauthorized", "login again"]
+    },
+    {
+      "id": "troubleshooting-04",
+      "category": "troubleshooting",
+      "question": "The chat says 'LLM is not configured'.",
+      "answer": "That message means OPENAI_API_KEY isn't set in backend/.env. Add your key, restart the server, and try again.",
+      "keywords": ["llm not configured", "openai key", "api key missing", "chat error"]
+    },
+    {
+      "id": "troubleshooting-05",
+      "category": "troubleshooting",
+      "question": "Chat returns 429 rate limited — why?",
+      "answer": "You exceeded 60 requests per minute on chat. Wait the seconds shown in the Retry-After header before trying again.",
+      "keywords": ["429", "rate limited", "too many requests", "slow down", "retry after"]
+    },
+    {
+      "id": "troubleshooting-06",
+      "category": "troubleshooting",
+      "question": "npm install fails with better-sqlite3 build errors.",
+      "answer": "better-sqlite3 needs a native build. Install build tools (Xcode CLT on macOS, build-essential on Linux) or use Node 20+ which ships prebuilds.",
+      "keywords": ["npm install", "better-sqlite3", "build error", "native module", "node version"]
+    },
+    {
+      "id": "troubleshooting-07",
+      "category": "troubleshooting",
+      "question": "My question got an answer that sounds wrong.",
+      "answer": "The assistant only answers from the knowledge base. If the context didn't cover your question, it should say so — rephrase or ask about a covered topic like pricing or deployment.",
+      "keywords": ["wrong answer", "hallucination", "inaccurate", "bad reply", "doesn't know"]
+    },
+    {
+      "id": "troubleshooting-08",
+      "category": "troubleshooting",
+      "question": "Where do I check server logs?",
+      "answer": "In development, the terminal running node server.js. On Render, the Logs tab of your Web Service. Logs include OpenAI call errors if something failed.",
+      "keywords": ["logs", "debugging", "terminal", "errors", "server log"]
+    },
+    {
+      "id": "troubleshooting-09",
+      "category": "troubleshooting",
+      "question": "The frontend builds but API calls 404.",
+      "answer": "The backend route path is wrong or the API is on a different port. Confirm the request goes to /api/... on port 4000 (or your deployed URL).",
+      "keywords": ["404", "api not found", "route missing", "wrong port", "endpoint"]
+    },
+    {
+      "id": "troubleshooting-10",
+      "category": "troubleshooting",
+      "question": "How do I reset the local database?",
+      "answer": "Stop the server, delete backend/heelllo.db, and restart — tables are recreated automatically. This wipes users and chat history, so back up first.",
+      "keywords": ["reset db", "delete database", "wipe data", "fresh start", "heelllo.db"]
+    },
+    {
+      "id": "security-01",
+      "category": "security",
+      "question": "How are passwords stored?",
+      "answer": "Passwords are hashed with bcrypt (10 salt rounds) before being stored. Plaintext passwords are never kept or logged.",
+      "keywords": ["password hash", "bcrypt", "security", "storage", "encryption"]
+    },
+    {
+      "id": "security-02",
+      "category": "security",
+      "question": "How do JWTs work here?",
+      "answer": "Login/signup returns a JWT signed with your server's JWT_SECRET. The token carries the user id and expires after 7 days — keep JWT_SECRET long and random.",
+      "keywords": ["jwt", "token", "secret", "signed", "expiry"]
+    },
+    {
+      "id": "security-03",
+      "category": "security",
+      "question": "Is my data encrypted at rest?",
+      "answer": "Yes — the SQLite database and deployed environment variables are encrypted at rest on our infrastructure.",
+      "keywords": ["encryption at rest", "data security", "at rest", "encrypted"]
+    },
+    {
+      "id": "security-04",
+      "category": "security",
+      "question": "Should I commit .env files?",
+      "answer": "No. backend/.gitignore already excludes .env. Commit .env.example with placeholder values so teammates know which variables exist.",
+      "keywords": [".env", "gitignore", "secrets", "commit", "environment file"]
+    },
+    {
+      "id": "security-05",
+      "category": "security",
+      "question": "What is JWT_SECRET and why does it matter?",
+      "answer": "It's the key that signs your auth tokens. If it leaks, anyone can forge tokens. Use a long random string and never share it.",
+      "keywords": ["jwt secret", "signing key", "secret value", "token forgery"]
+    },
+    {
+      "id": "security-06",
+      "category": "security",
+      "question": "Can someone else see my API responses?",
+      "answer": "Traffic is HTTPS-only in production, so responses are encrypted in transit. Keep your Bearer tokens out of URLs and logs.",
+      "keywords": ["https", "in transit", "sniffing", "encrypted", "tls"]
+    },
+    {
+      "id": "security-07",
+      "category": "security",
+      "question": "How do I rotate JWT_SECRET safely?",
+      "answer": "Generate a new value, update the server, then ask users to log in again — old tokens are rejected after the change. Do it during low traffic.",
+      "keywords": ["rotate secret", "change jwt", "new secret", "invalidate tokens"]
+    },
+    {
+      "id": "security-08",
+      "category": "security",
+      "question": "What does the API do with my chat messages?",
+      "answer": "Chat messages are stored in your workspace's SQLite database so your sidebar history persists between visits. Delete your account to remove them.",
+      "keywords": ["chat privacy", "messages stored", "data usage", "conversation", "privacy"]
+    },
+    {
+      "id": "security-09",
+      "category": "security",
+      "question": "Do you share data with third parties?",
+      "answer": "No — chat replies come from the local knowledge base, so no message data is sent to any third party or AI provider. Conversations are stored only in your workspace's SQLite database.",
+      "keywords": ["third party", "openai", "data sharing", "provider", "privacy"]
+    },
+    {
+      "id": "product-01",
+      "category": "product",
+      "question": "What is Boxcode the assistant?",
+      "answer": "I'm the built-in support assistant for Heelllo Boxcode. I answer from the product's knowledge base, so my replies stay grounded in the docs.",
+      "keywords": ["who are you", "assistant", "bot", "boxcode", "support"]
+    },
+    {
+      "id": "product-02",
+      "category": "product",
+      "question": "Is Boxcode the assistant an LLM?",
+      "answer": "No — I answer by matching your message against the local knowledge base and returning the best-matching entry's answer directly. No external AI or LLM calls are made.",
+      "keywords": ["llm", "ai", "gpt", "model", "openai"]
+    },
+    {
+      "id": "product-03",
+      "category": "product",
+      "question": "How does the assistant avoid hallucinating?",
+      "answer": "Every answer is looked up directly from the local knowledge base — the best-matching entry's answer is returned as-is, so there's nothing to invent.",
+      "keywords": ["hallucination", "accuracy", "grounded", "context", "knowledge base"]
+    },
+    {
+      "id": "product-04",
+      "category": "product",
+      "question": "Where can I get human support?",
+      "answer": "Use the support form in the dashboard footer. Free plan replies within 3 business days; paid plans get priority support.",
+      "keywords": ["human support", "contact", "help desk", "reach a person", "ticket"]
+    },
+    {
+      "id": "product-05",
+      "category": "product",
+      "question": "What's on the roadmap?",
+      "answer": "Next up: a CLI, webhooks for deploy events, SSO for paid plans, and more project templates. Vote on features from the dashboard feedback tab.",
+      "keywords": ["roadmap", "coming soon", "features planned", "future", "next release"]
+    },
+    {
+      "id": "product-06",
+      "category": "product",
+      "question": "How do I give feedback?",
+      "answer": "The dashboard has a Feedback button in the footer. Feature votes and bug reports both go straight to the team.",
+      "keywords": ["feedback", "feature request", "suggestions", "vote", "report"]
+    },
+    {
+      "id": "product-07",
+      "category": "product",
+      "question": "Is there a changelog?",
+      "answer": "Yes — the Changelog is linked in the dashboard footer and lists every release with bug fixes and new features.",
+      "keywords": ["changelog", "release notes", "updates", "version history", "news"]
+    },
+    {
+      "id": "product-08",
+      "category": "product",
+      "question": "Who is behind Heelllo Boxcode?",
+      "answer": "Heelllo Boxcode is built by a small team focused on making the scaffold → deploy → analyze loop as fast as possible.",
+      "keywords": ["company", "team", "about", "who made", "founders"]
+    },
+    {
+      "id": "product-09",
+      "category": "product",
+      "question": "How do I get enterprise support?",
+      "answer": "Enterprise plans include a dedicated support channel and SLAs. Contact sales from the dashboard footer to start a conversation.",
+      "keywords": ["enterprise", "sla", "dedicated support", "sales", "business"]
+    }
+  ]
+}
